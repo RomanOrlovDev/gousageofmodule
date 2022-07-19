@@ -27,3 +27,6 @@ In this case in `github.com/RomanOrlovDev/gomodenabled` go.mod already will cont
 When you get dependency of `github.com/RomanOrlovDev/gomodenabled` then go.mod will have
 two `//indirect` both for `github.com/pborman/uuid v1.2.1` and `github.com/google/uuid v1.0.0`.
 It is clear that it is not possible to identify tree of dependencies.
+
+In regard of when GO111MODULES="on" restricts usage of imports: it is simply not allowed
+to import any package (side package, not native), go will throw an error while compiling
